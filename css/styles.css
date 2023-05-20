@@ -226,7 +226,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: var(--text-main-color);
   padding-top: 24px;
   padding-bottom: 24px;
   display: inline-block;
@@ -522,6 +522,7 @@ body {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-form-input {
@@ -533,7 +534,6 @@ body {
   font-size: 18px;
   border: 1px solid var(--primary-white-color);
   background-color: transparent;
-  margin-right: 24px;
   color: var(--primary-white-color);
 
   transition: border var(--transition-dur-and-func);
@@ -554,18 +554,13 @@ body {
 .footer-subscribe-btn {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 8px 24px;
   height: auto;
   box-shadow: none;
 }
 
-.footer-subscribe-btn::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/modal/subscribe_plane.svg);
+.btn-desc {
+  margin-bottom: auto;
 }
 
 /* ==================== /FOOTER ==================== */
@@ -740,13 +735,16 @@ body {
   flex-direction: column;
 }
 
-.modal-form-field:not(:last-child) {
+.modal-form-field {
   margin-bottom: 8px;
+}
+
+.modal-form-field-message {
+  margin-bottom: 16px;
 }
 
 .modal-form-input-desc {
   display: block;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -839,14 +837,6 @@ body {
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  background-image: url(../images/modal/checkbox.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.modal-form-check:focus + .modal-form-check-desc::before {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   background-image: url(../images/modal/checkbox.svg);
